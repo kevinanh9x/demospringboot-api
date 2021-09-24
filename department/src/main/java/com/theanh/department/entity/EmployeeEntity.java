@@ -7,7 +7,7 @@ import javax.persistence.Table;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "employees")
+@Table(name = "tbl_employees")
 public class EmployeeEntity implements Serializable {
     @Id
     @Column(name = "employeesId", nullable = false)
