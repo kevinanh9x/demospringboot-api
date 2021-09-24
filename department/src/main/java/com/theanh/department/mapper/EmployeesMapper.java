@@ -51,7 +51,7 @@ public class EmployeesMapper {
     }
 
     public EmployeeEntity mapEmployeeEntityFromEmployeeReq(Long id, EmployeeReq from){
-        EmployeeEntity employeeEntity =repo.getOne(id);
+        EmployeeEntity employeeEntity =repo.getOne(Math.toIntExact(id));
         employeeEntity.setFullName(from.getFullName());
         return employeeEntity;
     }

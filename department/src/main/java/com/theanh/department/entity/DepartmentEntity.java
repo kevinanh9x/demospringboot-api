@@ -4,15 +4,15 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "department")
-public class DepartmentEntity {
+public class DepartmentEntity implements Serializable {
     @Id
     @Column(name = "departmentId", nullable = false)
     private int id;
 
-    @Id
     @Column(name = "nameDepartments", nullable = false)
     private String nameDepartment;
 

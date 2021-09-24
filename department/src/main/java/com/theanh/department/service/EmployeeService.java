@@ -38,7 +38,7 @@ public class EmployeeService {
     }
 
     public void removeEmployee(Long employeeId){
-        EmployeeEntity entity =repo.getOne(employeeId);
+        EmployeeEntity entity =repo.getOne(Math.toIntExact(employeeId));
         repo.delete(entity);
     }
 }

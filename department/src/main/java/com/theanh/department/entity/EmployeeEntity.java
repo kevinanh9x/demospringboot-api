@@ -4,31 +4,27 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "employees")
-public class EmployeeEntity {
+public class EmployeeEntity implements Serializable {
     @Id
     @Column(name = "employeesId", nullable = false)
     private int id;
 
-    @Id
     @Column(name = "fullName", nullable = false)
     private String fullName;
 
-    @Id
     @Column(name = "age", nullable = false)
     private int age;
 
-    @Id
     @Column(name = "address", nullable = false)
     private String address;
 
-    @Id
     @Column(name = "email", nullable = false)
     private String email;
 
-    @Id
     @Column(name = "salary", nullable = false)
     private double salary;
 
